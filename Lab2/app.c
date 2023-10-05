@@ -5,6 +5,13 @@
 
 int main(void)
 {
-    puts("Hallo world!!");
+    int a = 2, b = 3, c = 6;
+    a = 19;
+    b = a * 2;
+    c = a + b;
+    b = (a + b) * c;
+    a += b + c;
+
     return 0;
 }
+// 9 a 19 b3 c6 |10 a19 b38 c6  |11 a19 b38 c57 |12 a19 b3249 c57| 13  a3325 b3249 c57|
