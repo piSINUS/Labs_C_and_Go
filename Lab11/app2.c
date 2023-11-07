@@ -6,22 +6,21 @@
 int main(int argc, char const *argv[])
 {
     float Sum = 0,el;
-    int eps,x,i=2,f=1;
+    int eps,x,i=1,f=1;
     scanf("%d",&eps);
     scanf("%d",&x);
 
-    while (el<eps)
+    for(;;)
     {
-        el = (float)pow(-1,i) * ((pow(4,(pow(x,i))))/(f+2));
-        if (el<eps)
-        {break;  }
-        Sum += (float)el;
+        el = pow(-1,i) * ((pow(4,(pow(x,i))))/(f+2));
+        if(abs(el)<eps){break;}
+        Sum += el;
         printf("%f\n",Sum);
-        i+=1;
+        i+=1;  
         f*=i;
         
     }
-    printf("%f",Sum);
+    printf("%f\n",Sum);
     return 0;
 }
 
