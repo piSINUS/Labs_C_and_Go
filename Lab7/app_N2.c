@@ -5,9 +5,19 @@
 
 int main(int argc, char const *argv[])
 {
-    int score,start_num = 1234567, mnoj = 1;
+    int score,start_num = 123456789, mnoj = 1,len,k=0;
+    len = start_num;
+    
+    while (len!=0){
+        len/=10;
+        k++;
+    }
+    printf("%d",k);
+    if(k%2==0){
+        start_num = start_num/10;
+    }
     while (start_num>0)
-    {
+    {   
         mnoj = start_num %10 * mnoj;
         start_num = start_num / 100;
        

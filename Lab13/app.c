@@ -2,34 +2,27 @@
 #include <math.h>
 #include <stdio.h>
 
-int main(int argc, char const *argv[])
+int main(){
+    int arr_value;
+    scanf("%d",&arr_value);
+    int arr[arr_value],x,y,sum;
+    scanf("%d",&x);
+    scanf("%d",&y);
+    for (int i=0; x <y;)
 {
-    int b[100];
-int n1, n2;
-int sum=0;
-
-srand (time (NULL));
-
-printf("n1= ");
-scanf("%d", &n1);
-printf("n2= ");
-scanf("%d", &n2);
-
-int A,B;
-printf("A= ");
-scanf("%d", &A);
-printf("B= ");
-scanf("%d", &B);
-
-
-printf("massiv1:\n");
-for (int i = 0; i<n1; i++)
-{
-	a[i]= rand() % (B - A + 1) + A;
-	printf("a[%d]= %d\n", i,a[i]);
-}
-
-printf("massiv2:\n");
     
+    arr[i]=x;
+    x+=1;
+    i++;
+    
+} 
+    for (int i=0;i < arr_value;){
+        sum += arr[i];
+        i+=2;
+    }
+    printf("%d",sum);
+
+
     return 0;
+
 }
