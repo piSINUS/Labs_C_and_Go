@@ -1,4 +1,4 @@
-
+//  Задача 13 только с извлечением и записью в файл
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -29,7 +29,7 @@ printf("%d  ",a[i]);
 void input_file(int *a,int n)
 {
 	FILE *ft;
-	ft=fopen("f.txt","rt");
+	ft=fopen("input.txt","rt");
 	
 	for(int i=0; i<n; i++){
     	fscanf(ft,"%d",&a[i]);}
@@ -37,14 +37,6 @@ void input_file(int *a,int n)
 	print_arr(a,n);
 }
 
-void output_file(int *a,int n)
-{
-	FILE* f=fopen("f.txt","w+");
-	fprintf(f,"%d \n",n);
-	for(int i=0; i < n; i++)
-		fprintf(f,"%d\n ",a[i]);
-	fclose(f);
-}
 
 int sum_array(int *a,int n)
 {    int sum=0;
@@ -54,6 +46,13 @@ int sum_array(int *a,int n)
     }
 	return sum;
 }
+void output_file(int sum)
+{
+	FILE* f=fopen("output.txt","w+");
+	
+	fprintf(f,"%d\n ",sum);
+	fclose(f);
+}
 
 int main()
 {
@@ -62,7 +61,7 @@ int main()
 	int ch;
 	do
 {
-		printf("n=");
+		printf("n= ");
 		scanf("%d",&n);
 	} while ((n<0)||(n>=100));
 	printf("input array:\n 1-from keyboard, 2-from file");
@@ -74,8 +73,11 @@ int main()
 		break;
 	case 2:
 		input_file(a,n);
+		
 		break;
 	}
-	printf("\n%d",sum_array(a, n) );
+	int sum = sum_array(a,n);
+	printf("\n%d",sum );
+	output_file(sum);
 	return 0;
 }

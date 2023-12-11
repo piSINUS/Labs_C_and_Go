@@ -1,5 +1,4 @@
-// @todo 
-
+// @todo страница 104
 #include <stdlib.h>
 #include <math.h>
 #include <stdio.h>

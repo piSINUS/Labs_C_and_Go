@@ -1,3 +1,4 @@
+//  Задание 15 только с записью в бин файл
 #include <stdio.h>
 #include <stdlib.h>
   

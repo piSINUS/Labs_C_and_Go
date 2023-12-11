@@ -4,7 +4,7 @@
 
 int main(int argc, char const *argv[])
 {
-    int ameba=1, hours = 24;
+    int ameba=1, hours = 12;
     while (hours>0)
     {
         ameba*=2;

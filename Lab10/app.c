@@ -25,7 +25,7 @@ int main(int argc, char const *argv[])
             }
         if (schet==0)
         {
-            printf("%d prostie chisla \n",count1);
+            printf("prostie chisla %d\n",count1);
         }
             
         }

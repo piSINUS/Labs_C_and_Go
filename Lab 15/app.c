@@ -10,7 +10,7 @@ struct student
 
 int main(void)
 {   int k;
-    printf("vved k ");
+    printf("Ведите день рождения без 0 т.е  например 02.03.2005 следует записать 235 ");
     scanf("%d",&k);
 	struct student people[] = { {235, "Tom"}, {235, "Bob"}, {26, "Alice"}, {41, "Sam"}};
 	int n = sizeof(people)/sizeof(people[0]);
